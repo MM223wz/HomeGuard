@@ -25,7 +25,7 @@ rtc = machine.RTC()
 rtc.ntp_sync("pool.ntp.org")
 while not rtc.synced():
     machine.idle()
-# adjust your local timezone, by default, NTP time will be GMT
+# Adjust your local timezone, by default, NTP time will be GMT
 time.timezone(1*60**2) # GMT+1: 1*60*60
 print('RTC synced with NTP time: {}'.format(time.localtime()))
 
